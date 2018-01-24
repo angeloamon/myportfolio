@@ -19,7 +19,7 @@ h1,h2,h3,h4,h5 {
 	font-weight: bold;
 }
 
-p,a {
+small,p,a {
 	font-family: 'Quicksand', sans-serif;;
 	line-height: 30px;
 }
@@ -204,7 +204,7 @@ header {
 		bottom: -6%;
 		background-color: #ffffff;
 		height: 100px;
-		width: 50%;
+		width: 50.5%;
 		-webkit-transform: skewY(3deg);
 		-moz-transform: skewY(3deg);
 		-ms-transform: skewY(3deg);
@@ -215,11 +215,11 @@ header {
 	&::after {
 		content: '';
 		position: absolute;
-		right: 0;
+		right: -0.5%;
 		bottom: -6%;
 		background-color: #ffffff;
 		height: 100px;
-		width: 50%;
+		width: 50.1%;
 		-webkit-transform: skewY(-3deg);
 		-moz-transform: skewY(-3deg);
 		-ms-transform: skewY(-3deg);
@@ -264,6 +264,7 @@ footer {
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
+	position: relative;
 	.apa-footer-inner {
 		.apa-footer-wrapper {
 			h2 {
@@ -312,6 +313,20 @@ footer {
 					&:hover {
 						background-color: #1D70A2;
 					}
+				}
+			}
+		}
+	}
+	.apa-footer-copyright {
+		background-color: #1A1423;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		padding: 10px 0;
+		.apa-footer-copyright-wrapper {
+			.apa-footer-copyright-info {
+				small {
+					color: $primary-text-color;
 				}
 			}
 		}

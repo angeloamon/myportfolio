@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -13,35 +14,40 @@
 	<!-- header -->
 	<header class="apa-header">
 		<div class="apa-header-inner">
-			<div class="container">
-				<div class="row">
-					<div class="apa-header-wrapper">
-						<div class="apa-header-top">
-							<div class="apa-logo col-sm-6">
-								<img src="images/my-logo-white.png" alt="mylogo">
-							</div>
-							<div class="apa-navmenu col-sm-6 text-right">
-								<ul>
-									<li><a href="#">Home</a></li>
-									<li><a href="#">About</a></li>
-									<li><a href="#">Portfolio</a></li>
-									<li><a href="#">Contact</a></li>
-								</ul>
+			
+		</div>
+		<div class="apa-header-content text-center">
+			<nav class="apa-navbar" id="apa-navbar-id">
+				<div class="container">
+					<div class="row">
+						<div class="apa-header-wrapper">
+							<div class="apa-header-top">
+								<div class="apa-navmenu">
+									<img src="images/my-logo-white.png" alt="mylogo">
+									<div class="apa-toggle-navbar">
+										<i class="fa fa-bars menu" aria-hidden="true"></i>
+									</div>
+									<ul class="nav-links">
+										<li><a href="#">Home</a></li>
+										<li><a href="#">About</a></li>
+										<li><a href="#">Portfolio</a></li>
+										<li><a href="#">Contact</a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			
-		</div>
-		<div class="apa-header-content text-center">
+			</nav>
 			<h1>Angelo Paolo Amon</h1>
 			<p>Front-end Developer</p>
-			<ul>
-				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-			</ul>
+			<div class="social-icons">
+				<ul>
+					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
 			<a href="#" class="scroll-down text-center">Learn more</i></a>
 		</div>
 	</header>
@@ -57,7 +63,7 @@
 							<div class="apa-about-inner">
 								<div class="apa-about-content-info text-center">
 									<p>
-										My passion about web development started when I went into college and took up a bachelor's degree in Information Technology where I learned how building different types of systems help companies to be more competitive and get ahead from others. I want to be one of the reasons that a company would be successful because of what I am fond of doing. Front-end development, in particular, really amuses me because it involves art which I think is cool.  
+										My passion in web development started when I went into college and took up a bachelor's degree in Information Technology where I learned how building different types of systems help companies to be more competitive and get ahead from others. I want to be one of the reasons that a company would be successful because of what I am fond of doing. Front-end development, in particular, really amuses me because it involves art which I think is cool.  
 									</p>
 								</div>
 							</div>
@@ -79,12 +85,8 @@
 					</div>
 					<div class="apa-skills-info col-md-5">
 						<div class="apa-skills-do">
-							<h2>What I do</h2>
-							<p>Front-end Development, Graphics Design, Web Design</p>
-						</div>
-						<div class="apa-skills-use">
-							<h2>What I Use</h2>
-							<p>Following is the list of tools I use in web development and graphic design.</p>
+							<h2>What I Do</h2>
+							<p>I specialize in Front-end Development, Web Design, and Graphics Design. The following are the tools that I use in my development.</p>
 							<ul>
 								<li><p>HTML</p></li>
 								<li><p>CSS</p></li>
@@ -154,7 +156,6 @@
 								</div>
 							</div>
 							<div class="col-md-6 contact-form">
-								
 								<form action="">
 									<div class="form-group">
 										<input type="text" class="form-text form-control" id="email-address" placeholder="Enter Your Name">
@@ -163,7 +164,7 @@
 										<input type="email" class="form-text form-control" id="email-address" placeholder="Enter Email Address">
 									</div>
 									<div class="form-group">
-										<textarea class="form-text form-control" id="" cols="30" rows="10" placeholder="Write your message here"></textarea>
+										<textarea class="form-text form-control" id="" cols="30" rows="5" placeholder="Write your message here"></textarea>
 									</div>
 									<div class="form-group">
 										<input type="submit" value="Send" class="email-button btn btn-primary btn-lg">
@@ -182,5 +183,15 @@
 			</div>
 		</div>
 	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.menu').on('click', function(){
+				$('.nav-links').toggleClass('active');
+				$('.apa-navmenu').toggleClass('navmenu-bg');
+			});
+		});
+	</script>
 </body>
 </html>

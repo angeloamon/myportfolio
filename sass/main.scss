@@ -31,7 +31,16 @@ p {
 
 $content-font-eleven: 'Secular One', sans-serif;
 
+/* Font Colors */
+
 $primary-text-color: #ffffff; 
+
+/* Responsize Sizes */
+
+$phone: 768px;
+$tablet: 1120px;
+
+/* Start CSS */
 
 header {
 	background: url(../images/bg-image.jpg);
@@ -44,31 +53,6 @@ header {
 	.apa-header-inner {
 		height: 100%;
 		background-color: rgba(0,0,0,0.5);
-		.apa-header-wrapper {
-			.apa-header-top {
-				height: 80px;
-				.apa-logo {
-					img {
-						height: 80px;
-					}
-				}
-				.apa-navmenu {
-					ul {
-						line-height: 80px;
-						margin: 0;
-						li {
-							display: inline-block;
-							padding: 0 15px;
-							a {
-								color: $primary-text-color;
-								font-weight: bold;
-							}
-						}
-					}
-				}
-			}
-		}
-		
 	}
 	.apa-header-content {
 		position: absolute;
@@ -80,28 +64,118 @@ header {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		.apa-navbar {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			.apa-header-wrapper {
+				.apa-header-top {
+					height: 80px;
+					.apa-navmenu {
+						@media (max-width: $phone) {
+							-webkit-transition: 0.3s all;
+							-moz-transition: 0.3s all;
+							-o-transition: 0.3s all;
+							transition: 0.3s all;
+							&.navmenu-bg {
+								background-color: #533747;
+								height: 100vh;
+							}
+						}
+						img {
+							height: 80px;
+							float: left;
+						}
+						.apa-toggle-navbar {
+							line-height: 80px;
+							padding: 0 20px;
+							color: #ffffff;
+							font-size: 2em;
+							display: none;
+							@media (max-width: $phone) {
+								display: block;
+								text-align: right;
+							}
+						}
+						ul {
+							line-height: 80px;
+							margin: 0;
+							float: right;
+							@media (max-width: $phone) {
+								width: 100%;
+								padding: 55px 0;
+								height: 0;
+								opacity: 0;
+								overflow: hidden;
+								-webkit-transition: 0.3s all;
+								-moz-transition: 0.3s all;
+								-o-transition: 0.3s all;
+								transition: 0.3s all;
+								&.active {
+									opacity: 1;
+									height: auto;
+								}
+							}
+							li {
+								padding: 0 15px;
+								list-style-type: none;
+								display: inline-block;
+								@media (max-width: $phone) {
+									display: block;
+									font-size: 20px;
+								}
+								a {
+									color: $primary-text-color;
+									font-weight: bold;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
 		h1 {
 			color: $primary-text-color;
+			@media (max-width: $phone) {
+				font-size: 30px;
+			}
 		}
 		p {
 			color: $primary-text-color;
 			margin: 15px 0;
 			font-size: 2em;
+			@media (max-width: $phone) {
+				font-size: 16px;
+				margin: 0;
+			}
 		}
-		ul {
-			margin-top: 1%;
-			padding: 0;
-			li {
-				display: inline-block;
-				line-height: 40px;
-				height: 40px;
-				width: 40px;
-				border: 2px solid #ffffff;
-				border-radius: 50%;
-				margin: 0 10px;
-				i {
-					color: #ffffff;
-					font-size: 20px;
+		.social-icons {
+			ul {
+				margin: 0;
+				padding: 0;
+				line-height: 65px;
+				li {
+					display: inline-block;
+					line-height: 40px;
+					height: 40px;
+					width: 40px;
+					border: 2px solid #ffffff;
+					border-radius: 50%;
+					margin: 0 10px;
+					@media (max-width: $phone) {
+						height: 35px;
+						width: 35px;
+						margin: 0 5px;
+						line-height: 0;
+					}
+					a {
+						color: #ffffff;
+						font-size: 20px;
+						@media (max-width: $phone) {
+							font-size: 14px;
+						}
+					}
 				}
 			}
 		}
@@ -132,12 +206,21 @@ header {
 			justify-content: center;
 			.apa-about {
 				padding: 0 50px;
+				@media(max-width: $phone) {
+					padding: 0 30px;
+				}
 				.apa-about-inner {
 					width: 80%;
 					margin: 0 auto;
+					@media(max-width: $phone) {
+						width: 100%;
+					}
 					.apa-about-content-info {
-						h4 {
-							line-height: 30px;
+						p {
+							@media(max-width: $phone) {
+								font-size: 14px;
+								line-height: 20px;
+							}
 						}
 					}
 				}
@@ -170,9 +253,19 @@ header {
 				justify-content: center;
 				.apa-skills-do {
 					width: 60%;
-				}
-				.apa-skills-use {
-					width: 60%;
+					@media(max-width: $phone) {
+						width: 100%;
+					}
+					h2 {
+						@media(max-width: $phone) {
+							font-size: 28px;
+						}
+					}
+					p {
+						@media(max-width: $phone) {
+							font-size: 14px;
+						}
+					}
 					ul {
 						padding: 0;
 						margin-top: 30px;
@@ -184,11 +277,14 @@ header {
 							p {
 								padding: 2px 0 2px 10px;
 								color: #ffffff;
+								@media(max-width: $phone) {
+									font-size: 14px;
+									padding: 0 10px;
+								}
 							}
 						}
 					}
 				}
-				
 			}
 		}
 	}
@@ -197,7 +293,7 @@ header {
 .apa-sample-projects {
 	height: 80vh;
 	position: relative;
-	&::before {
+	/*&::before {
 		content: '';
 		position: absolute;
 		left: 0;
@@ -226,7 +322,7 @@ header {
 		-o-transform: skewY(-3deg);
 		transform: skewY(-3deg);
 		z-index: 1;
-	}
+	}*/
 	.apa-sample-projects-inner {
 		height: 80vh;
 		display: flex;
@@ -237,10 +333,17 @@ header {
 				h2 {
 					margin-top: 0;
 					margin-bottom: 0;
+					@media(max-width: $phone) {
+						font-size: 28px;
+						margin-bottom: 10px;
+					}
 				}
 			}
 			.apa-sample-projects-thumb {
 				margin-top: 50px;
+				@media(max-width: $phone) {
+					margin-top: 0;
+				}
 				.apa-project-image {
 					img {
 						max-width: 100%;
@@ -248,8 +351,21 @@ header {
 					}
 				}
 				.apa-project-title {
+					h3 {
+						@media(max-width: $phone) {
+							font-size: 18px;
+						}
+					}
+					p {
+						@media(max-width: $phone) {
+							font-size: 14px;
+						}
+					}
 					a {
 						line-height: 50px;
+						@media(max-width: $phone) {
+							line-height: 30px;
+						}
 					}
 				}
 			}
@@ -265,38 +381,93 @@ footer {
 	flex-direction: column;
 	justify-content: center;
 	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: -3%;
+		background-color: #ffffff;
+		height: 80px;
+		width: 50.5%;
+		-webkit-transform: skewY(3deg);
+		-moz-transform: skewY(3deg);
+		-ms-transform: skewY(3deg);
+		-o-transform: skewY(3deg);
+		transform: skewY(3deg);
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		right: -0.5%;
+		top: -3%;
+		background-color: #ffffff;
+		height: 80px;
+		width: 50.1%;
+		-webkit-transform: skewY(-3deg);
+		-moz-transform: skewY(-3deg);
+		-ms-transform: skewY(-3deg);
+		-o-transform: skewY(-3deg);
+		transform: skewY(-3deg);
+	}
 	.apa-footer-inner {
 		.apa-footer-wrapper {
 			h2 {
 				color: $primary-text-color;
 				text-align: center;
 				margin-bottom: 5%;
+				@media(max-width: $phone) {
+					font-size: 28px;
+				}
 			}
 			.contact-info {
 				margin-bottom: 5%;
+				@media(max-width: $phone) {
+					text-align: center;
+				}
 				.email-info {
 					margin-bottom: 15px;
+					@media(max-width: $phone) {
+						margin-bottom: 0;
+					}
 					h3 {
 						color: $primary-text-color;
+						@media(max-width: $phone) {
+							display: none;
+						}
 					}
 					p {
 						color: $primary-text-color;
+						@media(max-width: $phone) {
+							font-size: 14px;
+						}
 					}
 				}
 				.contact-num-info {
 					h3 {
 						color: $primary-text-color;
+						@media(max-width: $phone) {
+							display: none;
+						}
 					}
 					p {
 						color: $primary-text-color;
+						@media(max-width: $phone) {
+							font-size: 14px;
+						}
 					}
 				}
 				.social-media-links {
 					h3 {
 						color: $primary-text-color;
+						@media(max-width: $phone) {
+							display: none;
+						}
 					}
 					p {
 						color: $primary-text-color;
+						@media(max-width: $phone) {
+							font-size: 14px;
+						}
 					}
 				}
 			}
@@ -305,6 +476,10 @@ footer {
 					border-radius: 0;
 					font-size: 18px;
 					padding: 25px;
+					@media(max-width: $phone) {
+						font-size: 14px;
+						padding: 5px 10px;
+					}
 				}
 				.email-button {
 					width: 100%;
@@ -312,6 +487,9 @@ footer {
 					background-color: #3993DD;
 					&:hover {
 						background-color: #1D70A2;
+					}
+					@media(max-width: $phone) {
+						font-size: 14px;
 					}
 				}
 			}

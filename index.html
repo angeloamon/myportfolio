@@ -61,8 +61,8 @@
 					<div class="apa-about-content-wrapper">
 						<div class="apa-about col-sm-12">
 							<div class="apa-about-inner">
-								<div class="apa-about-content-info text-center">
-									<p>
+								<div class="apa-about-content-info apa-hidden text-center">
+									<p class="apa-about-text">
 										My passion in web development started when I went into college and took up a bachelor's degree in Information Technology where I learned how building different types of systems help companies to be more competitive and get ahead from others. I want to be one of the reasons that a company would be successful because of what I am fond of doing. Front-end development, in particular, really amuses me because it involves art which I think is cool.  
 									</p>
 								</div>
@@ -88,17 +88,17 @@
 							<h2>What I Do</h2>
 							<p>I specialize in Front-end Development, Web Design, and Graphics Design. The following are the tools that I use in my development.</p>
 							<ul>
-								<li><p>HTML</p></li>
-								<li><p>CSS</p></li>
-								<li><p>Javascript</p></li>
-								<li><p>Jquery</p></li>
-								<li><p>Wordpress</p></li>
-								<li><p>PHP</p5></li>
-								<li><p>MySql</p></li>
-								<li><p>Liquid</p></li>
-								<li><p>JSON</p></li>
-								<li><p>Adobe Photoshop</p></li>
-								<li><p>Adobe Lightroom</p></li>
+								<li class="apa-html"><p>HTML</p></li>
+								<li class="apa-css"><p>CSS</p></li>
+								<li class="apa-javascript"><p>Javascript</p></li>
+								<li class="apa-jquery"><p>Jquery</p></li>
+								<li class="apa-wordpress"><p>Wordpress</p></li>
+								<li class="apa-php"><p>PHP</p5></li>
+								<li class="apa-mysql"><p>MySql</p></li>
+								<li class="apa-liquid"><p>Liquid</p></li>
+								<li class="apa-json"><p>JSON</p></li>
+								<li class="apa-photoshop"><p>Adobe Photoshop</p></li>
+								<li class="apa-lightroom"><p>Adobe Lightroom</p></li>
 							</ul>
 						</div>
 					</div>
@@ -186,12 +186,31 @@
 
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<script type="text/javascript">
+
 		$(document).ready(function(){
+
+			//mobile navigation menu
+
 			$('.menu').on('click', function(){
 				$('.nav-links').toggleClass('active');
 				$('.apa-navmenu').toggleClass('navmenu-bg');
 			});
+
+			//about content animation
+
+			var aboutContent = $('.apa-about-content-info'),
+				aboutOffset = aboutContent.offset().top/2;
+
+			$(document).on('scroll', function(){
+				if($(document).scrollTop() > aboutOffset && aboutContent.hasClass('apa-hidden')) {
+					aboutContent.removeClass('apa-hidden');
+				}
+			});
+
+			//skills animation
+			
 		});
+
 	</script>
 </body>
 </html>

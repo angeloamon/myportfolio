@@ -415,7 +415,8 @@ footer {
   footer .apa-footer-inner .apa-footer-wrapper .contact-form .form-text {
     border-radius: 0;
     font-size: 18px;
-    padding: 25px; }
+    padding: 25px;
+    font-family: 'Quicksand', sans-serif; }
     @media (max-width: 768px) {
       footer .apa-footer-inner .apa-footer-wrapper .contact-form .form-text {
         font-size: 14px;
@@ -423,7 +424,8 @@ footer {
   footer .apa-footer-inner .apa-footer-wrapper .contact-form .email-button {
     width: 100%;
     border-radius: 0;
-    background-color: #3993DD; }
+    background-color: #3993DD;
+    font-family: 'Quicksand', sans-serif; }
     footer .apa-footer-inner .apa-footer-wrapper .contact-form .email-button:hover {
       background-color: #1D70A2; }
     @media (max-width: 768px) {
@@ -437,5 +439,21 @@ footer {
     padding: 10px 0; }
     footer .apa-footer-copyright .apa-footer-copyright-wrapper .apa-footer-copyright-info small {
       color: #ffffff; }
+
+/* SHOPIFY PROJECTS CSS */
+.apa-shopify-gallery {
+  height: 100vh; }
+  .apa-shopify-gallery .apa-inner-shopify-gallery .apa-shopify-gallery-title h1 {
+    font-size: 15em;
+    opacity: 0.05; }
+  .apa-shopify-gallery .apa-inner-shopify-gallery .apa-shopify-sites ul {
+    margin: 0;
+    padding: 0; }
+    .apa-shopify-gallery .apa-inner-shopify-gallery .apa-shopify-sites ul li {
+      list-style-type: none; }
+      .apa-shopify-gallery .apa-inner-shopify-gallery .apa-shopify-sites ul li img {
+        height: 300px;
+        width: 100%;
+        object-fit: cover; }
 
 /*# sourceMappingURL=main.css.map */

@@ -20,7 +20,7 @@ h1,h2,h3,h4,h5 {
 }
 
 small,p,a {
-	font-family: 'Quicksand', sans-serif;;
+	font-family: 'Quicksand', sans-serif;
 	line-height: 30px;
 }
 
@@ -552,6 +552,7 @@ footer {
 					border-radius: 0;
 					font-size: 18px;
 					padding: 25px;
+					font-family: 'Quicksand', sans-serif;
 					@media(max-width: $phone) {
 						font-size: 14px;
 						padding: 5px 10px;
@@ -561,6 +562,7 @@ footer {
 					width: 100%;
 					border-radius: 0;
 					background-color: #3993DD;
+					font-family: 'Quicksand', sans-serif;
 					&:hover {
 						background-color: #1D70A2;
 					}
@@ -581,6 +583,34 @@ footer {
 			.apa-footer-copyright-info {
 				small {
 					color: $primary-text-color;
+				}
+			}
+		}
+	}
+}
+
+/* SHOPIFY PROJECTS CSS */
+
+.apa-shopify-gallery {
+	height: 100vh;
+	.apa-inner-shopify-gallery {
+		.apa-shopify-gallery-title {
+			h1 {
+				font-size: 15em;
+				opacity: 0.05;
+			}
+		}
+		.apa-shopify-sites {
+			ul {
+				margin: 0;
+				padding: 0;
+				li {
+					list-style-type: none;
+					img {
+						height: 300px;
+						width: 100%;
+						object-fit: cover;
+					}
 				}
 			}
 		}

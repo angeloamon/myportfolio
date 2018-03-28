@@ -319,17 +319,19 @@ header {
       .apa-sample-projects .apa-sample-projects-inner .apa-sample-projects-wrapper .apa-sample-projects-thumb .apa-project-image img {
         max-width: 100%;
         height: auto; }
-      @media (max-width: 768px) {
-        .apa-sample-projects .apa-sample-projects-inner .apa-sample-projects-wrapper .apa-sample-projects-thumb .apa-project-title h3 {
-          font-size: 18px; } }
-      @media (max-width: 768px) {
-        .apa-sample-projects .apa-sample-projects-inner .apa-sample-projects-wrapper .apa-sample-projects-thumb .apa-project-title p {
-          font-size: 14px; } }
-      .apa-sample-projects .apa-sample-projects-inner .apa-sample-projects-wrapper .apa-sample-projects-thumb .apa-project-title a {
-        line-height: 50px; }
+      .apa-sample-projects .apa-sample-projects-inner .apa-sample-projects-wrapper .apa-sample-projects-thumb .apa-project-title {
+        padding: 30px; }
         @media (max-width: 768px) {
-          .apa-sample-projects .apa-sample-projects-inner .apa-sample-projects-wrapper .apa-sample-projects-thumb .apa-project-title a {
-            line-height: 30px; } }
+          .apa-sample-projects .apa-sample-projects-inner .apa-sample-projects-wrapper .apa-sample-projects-thumb .apa-project-title h3 {
+            font-size: 18px; } }
+        @media (max-width: 768px) {
+          .apa-sample-projects .apa-sample-projects-inner .apa-sample-projects-wrapper .apa-sample-projects-thumb .apa-project-title p {
+            font-size: 14px; } }
+        .apa-sample-projects .apa-sample-projects-inner .apa-sample-projects-wrapper .apa-sample-projects-thumb .apa-project-title a {
+          line-height: 50px; }
+          @media (max-width: 768px) {
+            .apa-sample-projects .apa-sample-projects-inner .apa-sample-projects-wrapper .apa-sample-projects-thumb .apa-project-title a {
+              line-height: 30px; } }
 
 footer {
   height: 100vh;

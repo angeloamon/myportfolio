@@ -364,6 +364,20 @@ footer {
     -ms-transform: skewY(3deg);
     -o-transform: skewY(3deg);
     transform: skewY(3deg); }
+    @media (max-width: 768px) {
+      footer::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -7%;
+        background-color: #ffffff;
+        height: 50px;
+        width: 50.5%;
+        -webkit-transform: skewY(3deg);
+        -moz-transform: skewY(3deg);
+        -ms-transform: skewY(3deg);
+        -o-transform: skewY(3deg);
+        transform: skewY(3deg); } }
   footer::after {
     content: '';
     position: absolute;
@@ -377,6 +391,23 @@ footer {
     -ms-transform: skewY(-3deg);
     -o-transform: skewY(-3deg);
     transform: skewY(-3deg); }
+    @media (max-width: 768px) {
+      footer::after {
+        content: '';
+        position: absolute;
+        right: -0.5%;
+        top: -7%;
+        background-color: #ffffff;
+        height: 50px;
+        width: 50.1%;
+        -webkit-transform: skewY(-3deg);
+        -moz-transform: skewY(-3deg);
+        -ms-transform: skewY(-3deg);
+        -o-transform: skewY(-3deg);
+        transform: skewY(-3deg); } }
+  @media (max-width: 768px) {
+    footer .apa-footer-inner .apa-footer-wrapper {
+      margin-bottom: 50px; } }
   footer .apa-footer-inner .apa-footer-wrapper h2 {
     color: #ffffff;
     text-align: center;

@@ -481,6 +481,20 @@ footer {
 		-ms-transform: skewY(3deg);
 		-o-transform: skewY(3deg);
 		transform: skewY(3deg);
+		@media(max-width: $phone){
+			content: '';
+			position: absolute;
+			left: 0;
+			top: -7%;
+			background-color: #ffffff;
+			height: 50px;
+			width: 50.5%;
+			-webkit-transform: skewY(3deg);
+			-moz-transform: skewY(3deg);
+			-ms-transform: skewY(3deg);
+			-o-transform: skewY(3deg);
+			transform: skewY(3deg);
+		}
 	}
 	&::after {
 		content: '';
@@ -495,9 +509,26 @@ footer {
 		-ms-transform: skewY(-3deg);
 		-o-transform: skewY(-3deg);
 		transform: skewY(-3deg);
+		@media(max-width: $phone){
+			content: '';
+			position: absolute;
+			right: -0.5%;
+			top: -7%;
+			background-color: #ffffff;
+			height: 50px;
+			width: 50.1%;
+			-webkit-transform: skewY(-3deg);
+			-moz-transform: skewY(-3deg);
+			-ms-transform: skewY(-3deg);
+			-o-transform: skewY(-3deg);
+			transform: skewY(-3deg);
+		}
 	}
 	.apa-footer-inner {
 		.apa-footer-wrapper {
+			@media(max-width: $phone){
+				margin-bottom: 50px;
+			}
 			h2 {
 				color: $primary-text-color;
 				text-align: center;

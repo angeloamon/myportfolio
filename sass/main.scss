@@ -367,7 +367,7 @@ header {
 }
 
 .apa-sample-projects {
-	height: 80vh;
+	height: auto;
 	position: relative;
 	/*&::before {
 		content: '';
@@ -400,11 +400,12 @@ header {
 		z-index: 1;
 	}*/
 	.apa-sample-projects-inner {
-		height: 80vh;
+		height: auto;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		.apa-sample-projects-wrapper {
+			margin-top: 60px;
 			.apa-sample-project-title {
 				h2 {
 					margin-top: 0;
@@ -417,6 +418,7 @@ header {
 			}
 			.apa-sample-projects-thumb {
 				margin-top: 50px;
+				margin-bottom: 50px;
 				@media(max-width: $phone) {
 					margin-top: 0;
 				}

@@ -4,6 +4,14 @@
 @import url('https://fonts.googleapis.com/css?family=Lora');
 @import url('https://fonts.googleapis.com/css?family=Bitter');
 
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
 /* fonts */
 h1 {
 	font-size: 5em;
@@ -542,10 +550,34 @@ footer {
 							display: none;
 						}
 					}
-					p {
-						color: $primary-text-color;
-						@media(max-width: $phone) {
-							font-size: 14px;
+					.social-icons-footer {
+						ul {
+							margin: 0;
+							padding: 0;
+							line-height: 65px;
+							li {
+								display: inline-block;
+								line-height: 40px;
+								height: 40px;
+								width: 40px;
+								border: 2px solid #ffffff;
+								border-radius: 50%;
+								margin: 0 10px;
+								text-align: center;
+								@media (max-width: $phone) {
+									height: 35px;
+									width: 35px;
+									margin: 0 5px;
+									line-height: 0;
+								}
+								a {
+									color: #ffffff;
+									font-size: 20px;
+									@media (max-width: $phone) {
+										font-size: 14px;
+									}
+								}
+							}
 						}
 					}
 				}

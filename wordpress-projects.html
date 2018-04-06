@@ -40,14 +40,14 @@
 
 	<!-- content -->
 
-	<section class="apa-shopify-gallery">
+	<section class="apa-wordpress-gallery">
 		<div class="container">
 			<div class="row">
-				<div class="apa-inner-shopify-gallery">
-					<div class="apa-shopify-gallery-title">
+				<div class="apa-inner-wordpress-gallery">
+					<div class="apa-wordpress-gallery-title">
 						<h1>WORDPRESS</h1>
 					</div>
-					<div class="apa-shopify-sites col-sm-12">
+					<div class="apa-wordpress-sites col-sm-12">
 						<div class="row">
 							<ul>
 								<li class="col-sm-4">
@@ -121,5 +121,15 @@
 		</div>
 	</footer>
 
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+
+	//mobile navigation menu
+	$('.menu').on('click', function(){
+		$('.nav-links').toggleClass('active');
+		$('.apa-navmenu').toggleClass('navmenu-bg');
+	});
+
+</script>
 </body>
 </html>

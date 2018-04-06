@@ -111,7 +111,6 @@ header {
 							float: right;
 							@media (max-width: $phone) {
 								width: 100%;
-								padding: 55px 0;
 								height: 0;
 								opacity: 0;
 								overflow: hidden;
@@ -122,6 +121,8 @@ header {
 								&.active {
 									opacity: 1;
 									height: auto;
+									margin: 0;
+									padding: 0;
 								}
 							}
 							li {
@@ -131,6 +132,7 @@ header {
 								@media (max-width: $phone) {
 									display: block;
 									font-size: 20px;
+									padding: 10px;
 								}
 								a {
 									color: $primary-text-color;
@@ -655,23 +657,112 @@ footer {
 	}
 }
 
-/* SHOPIFY PROJECTS CSS */
+/* PROJECTS CSS */
 
-.apa-shopify-gallery {
-	height: 100vh;
-	.apa-inner-shopify-gallery {
-		.apa-shopify-gallery-title {
+.apa-projects-gallery {
+	height: auto;
+	padding: 50px 0;
+	.apa-inner-projects-gallery {
+		.apa-projects-gallery-title {
 			h1 {
 				font-size: 10em;
 				opacity: 0.05;
+				@media(max-width: $phone){
+					font-size: 3em;
+					padding: 0 15px;
+					opacity: 1;
+				}
 			}
 		}
-		.apa-shopify-sites {
+		.apa-projects-sites {
+			margin-bottom: 60px;
 			ul {
 				margin: 0;
 				padding: 0;
 				li {
 					list-style-type: none;
+					@media(max-width: $phone){
+						margin-top: 40px;
+						margin-bottom: 40px;
+					}
+					img {
+						height: 300px;
+						width: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* SHOPIFY PROJECTS CSS */
+
+.apa-shopify-gallery {
+	height: auto;
+	padding: 50px 0;
+	.apa-inner-shopify-gallery {
+		.apa-shopify-gallery-title {
+			h1 {
+				font-size: 10em;
+				opacity: 0.05;
+				@media(max-width: $phone){
+					font-size: 3em;
+					padding: 0 15px;
+					opacity: 1;
+				}
+			}
+		}
+		.apa-shopify-sites {
+			margin-bottom: 60px;
+			ul {
+				margin: 0;
+				padding: 0;
+				li {
+					list-style-type: none;
+					@media(max-width: $phone){
+						margin-top: 40px;
+						margin-bottom: 40px;
+					}
+					img {
+						height: 300px;
+						width: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* WORDPRESS PROJECTS CSS */
+
+.apa-wordpress-gallery {
+	height: auto;
+	padding: 50px 0;
+	.apa-inner-wordpress-gallery {
+		.apa-wordpress-gallery-title {
+			h1 {
+				font-size: 10em;
+				opacity: 0.05;
+				@media(max-width: $phone){
+					font-size: 3em;
+					padding: 0 15px;
+					opacity: 1;
+				}
+			}
+		}
+		.apa-wordpress-sites {
+			margin-bottom: 60px;
+			ul {
+				margin: 0;
+				padding: 0;
+				li {
+					list-style-type: none;
+					@media(max-width: $phone){
+						margin-top: 40px;
+						margin-bottom: 40px;
+					}
 					img {
 						height: 300px;
 						width: 100%;
